@@ -1,6 +1,6 @@
 import React from "react"
 import "./defaultLayout.css"
-import { Container, Navbar } from "../../components"
+import { Container, Navbar, Footer } from "../../components"
 import PrometheusLogo from "../../prometheus-white.png"
 
 export default function DefaultLayout({ children }) {
@@ -12,6 +12,7 @@ export default function DefaultLayout({ children }) {
         <Navbar.Item to="#">Get In Touch</Navbar.Item>
       </Navbar>
       {children}
+      <Footer isDark />
     </div>
   )
 }

@@ -27,8 +27,8 @@ Hero.Subtitle = ({ children }) => (
   </h2>
 )
 
-Hero.CallToAction = ({ children }) => (
-  <a className="button is-black is-inverted is-outlined">{children}</a>
+Hero.CallToAction = ({ children, ...props }) => (
+  <a className="button is-black is-inverted is-outlined" {...props}>{children}</a>
 )
 
 export default Hero
