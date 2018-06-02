@@ -3,7 +3,7 @@ import { propsToHelperClasses } from '../../helpers/componentHelpers';
 import './Section.css'
 
 const Section = ({ children, ...props }) => (
-  <section className={`section ${propsToHelperClasses(props)}`}>
+  <section className={`section ${propsToHelperClasses(props)}`} {...props}>
     <div className="container">
       {children}
     </div>

@@ -3,7 +3,7 @@ import './Container.css'
 import { propsToHelperClasses } from '../../helpers/componentHelpers';
 
 const Container = ({ children, ...props }) => (
-  <div className={`container ${propsToHelperClasses(props)}`}>
+  <div className={`container ${propsToHelperClasses(props)}`} {...props}>
     {children}
   </div>
 )
