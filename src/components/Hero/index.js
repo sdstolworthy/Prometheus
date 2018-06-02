@@ -3,24 +3,32 @@ import { propsToHelperClasses } from '../../helpers/componentHelpers';
 
 const Hero = ({ children, style, ...props }) => (
   <div style={style} className={`hero ${propsToHelperClasses(props)}`}>
-    <div className="hero-body">
-      <div class="container">
-        {children}
-      </div>
+    {children}
+  </div>
+)
+
+Hero.Body = ({ children, style, ...props }) => (
+  <div style={style} className={`hero-body ${propsToHelperClasses(props)}`} {...props}>
+    <div className="container">
+      {children}
     </div>
   </div>
 )
 
 Hero.Title = ({ children }) => (
-  <h1 class="title">
+  <h1 className="title">
     {children}
   </h1>
 )
 
 Hero.Subtitle = ({ children }) => (
-  <h2 class="subtitle">
+  <h2 className="subtitle">
     {children}
   </h2>
+)
+
+Hero.CallToAction = ({ children }) => (
+  <a className="button is-black is-inverted is-outlined">{children}</a>
 )
 
 export default Hero

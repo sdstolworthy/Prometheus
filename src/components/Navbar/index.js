@@ -5,6 +5,7 @@ import { propsToHelperClasses } from '../../helpers/componentHelpers';
 
 const Navbar = ({ children, logo, ...props }) => (
   <nav className={`navbar ${propsToHelperClasses(props)}`}>
+    <div className="container">
     <div className="navbar-brand">
       <a className="navbar-item">
         <img src={logo} />
@@ -14,6 +15,7 @@ const Navbar = ({ children, logo, ...props }) => (
       <div className="navbar-end">
         {children}
       </div>
+    </div>
     </div>
   </nav>
 )
