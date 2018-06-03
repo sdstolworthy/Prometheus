@@ -1,6 +1,6 @@
 import React from "react"
 import "./defaultLayout.css"
-import { Container, Navbar, Footer, Button, Level } from "../../components"
+import { Navbar, Footer, Button, Level } from "../../components"
 import PrometheusLogo from "../../prometheus-white.png"
 import { PhoneIcon } from "../../assets/icons";
 
