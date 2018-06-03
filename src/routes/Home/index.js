@@ -44,7 +44,7 @@ class HomePage extends React.Component {
               Prometheus Software Consulting can take care the hassle out of large tech projects,<br/>so your business can get back to doing what it does best.
             </p>
           </Hero.Subtitle>
-          <Hero.CallToAction isRounded>
+          <Hero.CallToAction isRounded onClick={this.openModal}>
             Ask us how
           </Hero.CallToAction>
         </Hero.Body>
@@ -73,7 +73,7 @@ class HomePage extends React.Component {
       </Modal>
     )
     return (
-      <DefaultLayout>
+      <DefaultLayout location={this.props.location}>
         <div className="Home">
           {callToActionHero}
           {qualityCodeHero}

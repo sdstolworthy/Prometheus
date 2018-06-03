@@ -7,9 +7,9 @@ const Navbar = ({ children, logo, ...props }) => (
   <nav className={`navbar ${propsToHelperClasses(props)}`}>
     <div className="container">
     <div className="navbar-brand">
-      <a className="navbar-item">
+      <Link to="/" className="navbar-item">
         <img src={logo} />
-      </a>
+      </Link>
     </div>
     <div className="navbar-menu">
       <div className="navbar-end">

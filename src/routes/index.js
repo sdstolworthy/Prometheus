@@ -1,12 +1,16 @@
 import React from 'react'
 import { HashRouter as Router, Route } from 'react-router-dom'
 import Home from './Home'
+import Services from './Services'
 
 class PrometheusRoutes extends React.Component {
   render() {
     return (
       <Router>
-        <Route exact path="/" component={Home} />
+        <div>
+          <Route path="/Services" component={Services} />
+          <Route exact path="/" component={Home} />
+        </div>
       </Router>
     )
   }

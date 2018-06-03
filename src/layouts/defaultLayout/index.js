@@ -4,12 +4,17 @@ import { Navbar, Footer, Button, Level } from "../../components"
 import PrometheusLogo from "../../prometheus-white.png"
 import { PhoneIcon } from "../../assets/icons";
 
-export default function DefaultLayout({ children }) {
+export default function DefaultLayout({ children, location }) {
   return (
-    <div>
+    <div style={{
+      display:'flex',
+      flexDirection: 'column',
+      minHeight: '97vh',
+    }}  
+    >
       <Navbar logo={PrometheusLogo} isFixedTop isTransparent isBlack>
-        <Navbar.Link to="#">Our Services</Navbar.Link>
-        <Navbar.Link to="#">About Us</Navbar.Link>
+        <Navbar.Link to="/Services" isActive={location.pathname.includes('Services')}>Our Services</Navbar.Link>
+        {/* <Navbar.Link to="#">About Us</Navbar.Link> */}
         <Navbar.Link to="#">Get In Touch</Navbar.Link>
         <Navbar.Item>
           <Button.ExternalLink href="tel:+18019970739" isRounded isInverted isOutlined isBlack>
@@ -17,8 +22,10 @@ export default function DefaultLayout({ children }) {
           </Button.ExternalLink>
         </Navbar.Item>
       </Navbar>
-      {children}
-      <Footer style={{ backgroundColor: '#363636', color: 'white' }}>
+      <div style={{flex:1}}>
+        {children}
+      </div>
+      <Footer style={{ backgroundColor: '#363636', color: 'white', justifySelf: 'flex-end' }}>
         <Level>
           <Level.Left style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
             <div><a style={{ color: 'white' }} href="mailto:info@prometheusconsulting.io">info@prometheusconsulting.io</a></div>
