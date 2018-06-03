@@ -9,6 +9,7 @@ import {
   Modal
 } from "../../components"
 import CodeHero from "../../assets/images/code-hero.png"
+import LogoGallery from '../../assets/images/logos.png'
 import "./Home.css"
 
 class HomePage extends React.Component {
@@ -56,9 +57,9 @@ class HomePage extends React.Component {
       </Hero>
     )
     const whoWeWorkedForSection = (
-      <Section isMedium>
-        <Section.Title>Who we have worked for</Section.Title>
-        <Section.Subtitle>Logos. Logos. More Logos.</Section.Subtitle>
+      <Section isLarge>
+        <Section.Title>Where our partners have worked</Section.Title>
+        <img src={LogoGallery} />
       </Section>
     )
     const contactModal = (

@@ -8,20 +8,20 @@ const Level = ({ children, ...props }) => (
   </div>
 )
 
-Level.Item = ({ children }) => (
-  <div className="level-item">
+Level.Item = ({ children, ...props }) => (
+  <div className="level-item" {...props}>
     {children}
   </div>
 )
 
-Level.Left = ({ children }) => (
-  <div className="level-left">
+Level.Left = ({ children, ...props }) => (
+  <div className="level-left" {...props}>
     {children}
   </div>
 )
 
-Level.Right = ({ children }) => (
-  <div className="level-right">
+Level.Right = ({ children, ...props }) => (
+  <div className="level-right" {...props}>
     {children}
   </div>
 )
