@@ -49,7 +49,7 @@ class HomePage extends React.Component {
         <Hero.Body>
           <Hero.Title>We can make your idea come to life.</Hero.Title>
           <Hero.Subtitle>Let's talk about your project</Hero.Subtitle>
-          <Hero.CallToAction onClick={this.openModal}>
+          <Hero.CallToAction isRounded onClick={this.openModal}>
             Contact Us
           </Hero.CallToAction>
         </Hero.Body>

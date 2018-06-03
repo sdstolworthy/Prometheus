@@ -19,10 +19,16 @@ const Navbar = ({ children, logo, ...props }) => (
     </div>
   </nav>
 )
-Navbar.Item = ({ children, to, ...props }) => (
+Navbar.Link = ({ children, to, ...props }) => (
   <Link to={to} className={`navbar-item ${propsToHelperClasses(props)}`} >
     {children}
   </Link>
+)
+
+Navbar.Item = ({ children, ...props }) => (
+  <div className={`navbar-item ${propsToHelperClasses(props)}`} >
+    {children}
+  </div>
 )
 
 export default Navbar
