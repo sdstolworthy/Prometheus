@@ -7,6 +7,7 @@ import {
 } from 'prometheusui'
 import CodeHero from "../../assets/images/code-hero.png"
 import LogoGallery from '../../assets/images/logos.png'
+import AppWireframe from '../../assets/images/appwireframe.jpg'
 import "./Home.css"
 
 class HomePage extends React.Component {
@@ -24,19 +25,14 @@ class HomePage extends React.Component {
   }
   render() {
     const qualityCodeHero = (
-      <Hero
+      <Hero.Image
+        image={AppWireframe}
         isSuccess
         isBold
         isLarge
         isFullheight
-        style={{
-          background: `url(${CodeHero})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          position: "relative"
-        }}
       >
-        <div className="hero-cover" />
+        <Hero.Cover />
         <Hero.Body>
           <Hero.Title>Quality Code. On Time, Every Time.</Hero.Title>
           <Hero.Subtitle>
@@ -48,7 +44,7 @@ class HomePage extends React.Component {
             Ask us how
           </Hero.CallToAction>
         </Hero.Body>
-      </Hero>
+      </Hero.Image>
     )
     const callToActionHero = (
       <Hero isBold isDark isFullheight>
