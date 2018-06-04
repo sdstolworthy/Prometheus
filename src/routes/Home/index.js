@@ -4,7 +4,7 @@ import {
   Hero,
   Section,
   Modal
-} from "../../components"
+} from 'prometheusui'
 import CodeHero from "../../assets/images/code-hero.png"
 import LogoGallery from '../../assets/images/logos.png'
 import "./Home.css"

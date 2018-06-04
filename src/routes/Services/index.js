@@ -1,11 +1,11 @@
 import React from 'react'
 import { DefaultLayout } from '../../layouts'
 import './Services.css'
-import { Section, Content } from '../../components';
+import { Section, Content } from 'prometheusui';
 
 class Services extends React.Component {
   render() {
-    console.log(this.props.location)
+    console.log(this.props.locationw)
     return (
       <DefaultLayout location={this.props.location}>
         <Section>

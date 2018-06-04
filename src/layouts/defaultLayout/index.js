@@ -1,6 +1,6 @@
 import React from "react"
 import "./defaultLayout.css"
-import { Navbar, Footer, Button, Level } from "../../components"
+import { Navbar, Footer, Button, Level } from "prometheusui"
 import PrometheusLogo from "../../prometheus-white.png"
 import { PhoneIcon } from "../../assets/icons";
 
@@ -13,6 +13,7 @@ export default function DefaultLayout({ children, location }) {
     }}  
     >
       <Navbar logo={PrometheusLogo} isFixedTop isTransparent isBlack>
+        <Navbar.Link to="/">Home</Navbar.Link>
         <Navbar.Link to="/Services" isActive={location.pathname.includes('Services')}>Our Services</Navbar.Link>
         {/* <Navbar.Link to="#">About Us</Navbar.Link> */}
         <Navbar.Link to="#">Get In Touch</Navbar.Link>
