@@ -1,4 +1,5 @@
 import React from "react"
+import propTypes from 'prop-types'
 import "./defaultLayout.css"
 import { Navbar, Footer, Button, Level } from "prometheusui"
 import PrometheusLogo from "../../prometheus-white.png"
@@ -15,8 +16,7 @@ export default function DefaultLayout({ children, location }) {
       <Navbar logo={PrometheusLogo} isFixedTop isTransparent isBlack>
         <Navbar.Link to="/">Home</Navbar.Link>
         <Navbar.Link to="/Services" isActive={location.pathname.includes('Services')}>Our Services</Navbar.Link>
-        {/* <Navbar.Link to="#">About Us</Navbar.Link> */}
-        <Navbar.Link to="#">Get In Touch</Navbar.Link>
+        <Navbar.Link to="/Contact">Get In Touch</Navbar.Link>
         <Navbar.Item>
           <Button.ExternalLink href="tel:+18019970739" isRounded isInverted isOutlined isBlack>
             <PhoneIcon size={"1.3rem"} />&nbsp;&nbsp;(801) 997-0739
@@ -40,4 +40,14 @@ export default function DefaultLayout({ children, location }) {
       </Footer>
     </div>
   )
+}
+
+DefaultLayout.propTypes = {
+  location: propTypes.shape({
+    pathname: propTypes.string,
+  })
+}
+
+DefaultLayout.defaultProps = {
+  location: { pathname: '' }
 }

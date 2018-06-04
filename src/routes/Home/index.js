@@ -26,7 +26,7 @@ class HomePage extends React.Component {
   render() {
     const qualityCodeHero = (
       <Hero.Image
-        image={AppWireframe}
+        image={CodeHero}
         isSuccess
         isBold
         isLarge
@@ -47,7 +47,8 @@ class HomePage extends React.Component {
       </Hero.Image>
     )
     const callToActionHero = (
-      <Hero isBold isDark isFullheight>
+      <Hero.Image image={AppWireframe} isBold isDark isFullheight>
+        <Hero.Cover />
         <Hero.Body>
           <Hero.Title>We can make your idea come to life.</Hero.Title>
           <Hero.Subtitle>Let's talk about your project</Hero.Subtitle>
@@ -55,7 +56,7 @@ class HomePage extends React.Component {
             Contact Us
           </Hero.CallToAction>
         </Hero.Body>
-      </Hero>
+      </Hero.Image>
     )
     const whoWeWorkedForSection = (
       <Section isLarge>
